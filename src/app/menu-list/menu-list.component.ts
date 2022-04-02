@@ -18,10 +18,13 @@ export class MenuListComponent implements OnInit {
   constructor(
     @Inject(LOCALE_ID) public locale: string,
     private menuService: MenuService,
-    private router: Router,
   ) { }
 
   ngOnInit() {
+    this.getData();
+  }
+
+  getData(): void {
     const menu: Category[] = this.menuService.get();
     this.items = menu.map(category => {
       return {

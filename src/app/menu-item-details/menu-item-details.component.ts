@@ -13,19 +13,22 @@ import { Dish } from '../models/dish';
 export class MenuItemDetailsComponent implements OnInit {
   menuItemId: number;
   menuItem: Dish;
-  menu: Category[];
   textures: MenuItem[];
   toppings: MenuItem[];
 
   constructor(
     private menuService: MenuService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
   ) { }
 
   ngOnInit() {
     this.menuItemId = parseInt(this.route.snapshot.paramMap.get('menuItemId'), 10);
-    this.menu = this.menuService.get();
-    for (let category of this.menu) {
+    this.getData();
+  }
+
+  getData(): void {
+    const menu: Category[] = this.menuService.get();
+    for (let category of menu) {
       this.menuItem = category.items.find(menuItem => menuItem.id === this.menuItemId);
       if (this.menuItem) {
         this.textures = [{
@@ -35,7 +38,7 @@ export class MenuItemDetailsComponent implements OnInit {
           })
         }];
         this.toppings = [{
-          label: 'Toppings',
+          label: 'Extra Toppings',
           items: category.toppings.map(topping => {
             return { label: topping };
           })
