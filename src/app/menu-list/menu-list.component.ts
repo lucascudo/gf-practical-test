@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuService } from '../menu.service';
 import { Router } from '@angular/router';
+import { Category } from '../models/category';
 
 @Component({
   selector: 'app-menu-list',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class MenuListComponent implements OnInit {
 
-  menu;
+  menu: Category[];
 
   constructor(
     private menuService: MenuService,
@@ -18,8 +19,6 @@ export class MenuListComponent implements OnInit {
 
   ngOnInit() {
     this.menu = this.menuService.get();
-    this.menu = this.menu.default;
-    console.log(this.menu);
   }
 
   navigateToDetails(itemId) {

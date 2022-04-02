@@ -1,59 +1,63 @@
-{
-  "categories": [
-    {
-      "name": "Pizza",
-      "items": [
-        {
-          "id": 1,
-          "name": "Pizza Margherita",
-          "description": "Tomato sauce, cheese"
-        },
-        {
-          "id": 2,
-          "name": "Pizza Prosciutto",
-          "description": "Tomato sauce, cheese, ham"
-        },
-        {
-          "id": 3,
-          "name": "Pizza Frutti di Mare",
-          "description": "Tomato sauce, cheese, tuna, shrimps"
-        }
-      ],
-      "textures": [
-        "Crispy",
-        "Fluffy"
-      ],
-      "toppings": [
-        "Corn",
-        "Bacon",
-        "Extra mozzarella"
-      ]
-    },
-    {
-      "name": "Pasta",
-      "items": [
-        {
-          "id": 4,
-          "name": "Spaghetti Bolognese"
-        },
-        {
-          "id": 5,
-          "name": "Spaghetti Frutti di Mare",
-          "description": "with sea food"
-        },
-        {
-          "id": 6,
-          "name": "Lasagna Bolognese"
-        }
-      ],
-      "textures": [
-        "Al dente",
-        "Soft"
-      ],
-      "toppings": [
-        "Grated cheese",
-        "Bacon"
-      ]
-    }
-  ]
-}
+[
+  {
+    "name": "Pizza",
+    "items": [
+      {
+        "id": 1,
+        "name": "Pizza Margherita",
+        "description": "Tomato sauce, cheese",
+        "price": 7
+      },
+      {
+        "id": 2,
+        "name": "Pizza Prosciutto",
+        "description": "Tomato sauce, cheese, ham",
+        "price": 10
+      },
+      {
+        "id": 3,
+        "name": "Pizza Frutti di Mare",
+        "description": "Tomato sauce, cheese, tuna, shrimps",
+        "price": 12
+      }
+    ],
+    "textures": [
+      "Crispy",
+      "Fluffy"
+    ],
+    "toppings": [
+      "Corn",
+      "Bacon",
+      "Extra mozzarella"
+    ]
+  },
+  {
+    "name": "Pasta",
+    "items": [
+      {
+        "id": 4,
+        "name": "Spaghetti Bolognese",
+        "price": 9
+      },
+      {
+        "id": 5,
+        "name": "Lasagna Bolognese",
+        "price": 10
+      },
+      {
+        "id": 6,
+        "name": "Spaghetti Frutti di Mare",
+        "description": "with sea food",
+        "price": 12
+      }
+    ],
+    "textures": [
+      "Al dente",
+      "Soft"
+    ],
+    "toppings": [
+      "Grated cheese",
+      "Bacon"
+    ]
+  }
+]

@@ -1,11 +1,12 @@
 <p>menu-list works!</p>
 
-<div *ngFor="let category of menu.categories">
+<div *ngFor="let category of menu">
   <p>{{ category.name }}</p>
   <menu *ngFor="let item of category.items">
     <li (click)="navigateToDetails(item.id)">
       {{ item.name }}
       <span *ngIf="item.description">({{ item.description }})</span>
+      - {{ item.price | currency:'EUR' }}
     </li>
   </menu>
 </div>
