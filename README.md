@@ -1,3 +1,5 @@
+[![Node.js CI](https://github.com/lucascudo/gloriafood-practical-test/actions/workflows/node.js.yml/badge.svg)](https://github.com/lucascudo/gloriafood-practical-test/actions/workflows/node.js.yml)
+
 # PracticalTest
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
