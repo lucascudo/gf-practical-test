@@ -1,0 +1,45 @@
+{
+  "categories": [
+    {
+      "name": "Pizza",
+      "items": [
+        {
+          "name": "Pizza Margherita",
+          "description": "Tomato sauce, cheese"
+        },
+        {
+          "name": "Pizza Prosciutto",
+          "description": "Tomato sauce, cheese, ham"
+        },
+        {
+          "name": "Pizza Frutti di Mare",
+          "description": "Tomato sauce, cheese, tuna, shrimps"
+        }
+      ],
+      "crusts": [
+        "Crispy",
+        "Fluffy"
+      ],
+      "toppings": [
+        "corn",
+        "bacon",
+        "mozzarella"
+      ]
+    },
+    {
+      "name": "Pasta",
+      "items": [
+        {
+          "name": "Spaghetti Bolognese"
+        },
+        {
+          "name": "Spaghetti Frutti di Mare",
+          "description": "with sea food"
+        },
+        {
+          "name": "Lasagna Bolognese"
+        }
+      ]
+    }
+  ]
+}
