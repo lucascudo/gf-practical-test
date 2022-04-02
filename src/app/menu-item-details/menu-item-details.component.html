@@ -1,4 +1,4 @@
-<p-card header="{{ this.menuItem?.name }} - {{ this.menuItem?.price | currency:'EUR' }}" subheader="{{ this.menuItem?.description }}" [style]="{width: '360px'}">
+<p-card header="{{ this.menuItem?.name }} - {{ this.menuItem?.price | currency:'EUR' }}" subheader="{{ (this.menuItem?.description) ? '(' + this.menuItem?.description + ')' : '' }}" [style]="{width: '360px'}">
   <p-header>
     <a [routerLink]="[ '/' ]">
       <i class="pi pi-chevron-left"></i>
