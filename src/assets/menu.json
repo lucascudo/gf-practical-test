@@ -4,41 +4,55 @@
       "name": "Pizza",
       "items": [
         {
+          "id": 1,
           "name": "Pizza Margherita",
           "description": "Tomato sauce, cheese"
         },
         {
+          "id": 2,
           "name": "Pizza Prosciutto",
           "description": "Tomato sauce, cheese, ham"
         },
         {
+          "id": 3,
           "name": "Pizza Frutti di Mare",
           "description": "Tomato sauce, cheese, tuna, shrimps"
         }
       ],
-      "crusts": [
+      "textures": [
         "Crispy",
         "Fluffy"
       ],
       "toppings": [
-        "corn",
-        "bacon",
-        "mozzarella"
+        "Corn",
+        "Bacon",
+        "Extra mozzarella"
       ]
     },
     {
       "name": "Pasta",
       "items": [
         {
+          "id": 4,
           "name": "Spaghetti Bolognese"
         },
         {
+          "id": 5,
           "name": "Spaghetti Frutti di Mare",
           "description": "with sea food"
         },
         {
+          "id": 6,
           "name": "Lasagna Bolognese"
         }
+      ],
+      "textures": [
+        "Al dente",
+        "Soft"
+      ],
+      "toppings": [
+        "Grated cheese",
+        "Bacon"
       ]
     }
   ]

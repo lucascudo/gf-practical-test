@@ -9,12 +9,17 @@ import { Router } from '@angular/router';
 })
 export class MenuListComponent implements OnInit {
 
+  menu;
+
   constructor(
     private menuService: MenuService,
     private router: Router
   ) { }
 
   ngOnInit() {
+    this.menu = this.menuService.get();
+    this.menu = this.menu.default;
+    console.log(this.menu);
   }
 
   navigateToDetails(itemId) {

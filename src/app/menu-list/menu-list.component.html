@@ -1,5 +1,11 @@
 <p>menu-list works!</p>
 
-<div (click)="navigateToDetails(1)"> click me, I go to item details for id 1</div>
-<div (click)="navigateToDetails(2)"> click me, I go to item details for id 2</div>
-<div (click)="navigateToDetails(3)"> click me, I go to item details for id 3</div>
+<div *ngFor="let category of menu.categories">
+  <p>{{ category.name }}</p>
+  <menu *ngFor="let item of category.items">
+    <li (click)="navigateToDetails(item.id)">
+      {{ item.name }}
+      <span *ngIf="item.description">({{ item.description }})</span>
+    </li>
+  </menu>
+</div>

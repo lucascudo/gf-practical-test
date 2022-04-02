@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import * as MenuJson from '../assets/menu.json';
 
 @Injectable({
   providedIn: 'root'
@@ -6,4 +7,8 @@ import { Injectable } from '@angular/core';
 export class MenuService {
 
   constructor() { }
+
+  get() {
+    return MenuJson;
+  }
 }
