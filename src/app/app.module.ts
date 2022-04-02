@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { MenuListComponent } from './menu-list/menu-list.component';
 import { MenuItemDetailsComponent } from './menu-item-details/menu-item-details.component';
 import { MenuModule } from 'primeng/menu';
+import {CardModule} from 'primeng/card';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MenuModule } from 'primeng/menu';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    MenuModule
+    MenuModule,
+    CardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuService } from '../menu.service';
 import { ActivatedRoute } from '@angular/router';
-import { MenuItem } from '../models/menu-item';
 import { Category } from '../models/category';
+import { MenuItem } from 'primeng-lts/api';
+import { Dish } from '../models/dish';
 
 @Component({
   selector: 'app-menu-item-details',
@@ -11,10 +12,10 @@ import { Category } from '../models/category';
 })
 export class MenuItemDetailsComponent implements OnInit {
   menuItemId: number;
-  menuItem: MenuItem;
+  menuItem: Dish;
   menu: Category[];
-  textures: string[];
-  toppings: string[];
+  textures: MenuItem[];
+  toppings: MenuItem[];
 
   constructor(
     private menuService: MenuService,
@@ -27,8 +28,18 @@ export class MenuItemDetailsComponent implements OnInit {
     for (let category of this.menu) {
       this.menuItem = category.items.find(menuItem => menuItem.id === this.menuItemId);
       if (this.menuItem) {
-        this.textures = category.textures;
-        this.toppings = category.toppings;
+        this.textures = [{
+          label: 'Crust (required)',
+          items: category.textures.map(texture => {
+            return { label: texture };
+          })
+        }];
+        this.toppings = [{
+          label: 'Toppings',
+          items: category.toppings.map(topping => {
+            return { label: topping };
+          })
+        }];
         break;
       }
     }

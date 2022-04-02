@@ -1,11 +1,11 @@
-export interface IMenuItem {
+export interface IDish {
   id: number;
   name: string;
   price: number;
   description?: string;
 }
 
-export class MenuItem implements IMenuItem {
+export class Dish implements IDish {
   constructor(
     public id: number,
     public name: string,

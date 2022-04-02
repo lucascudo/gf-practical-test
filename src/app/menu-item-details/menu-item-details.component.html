@@ -1,15 +1,11 @@
-<p>menu-item-details works!</p>
+<p-card header="{{ this.menuItem?.name }} - {{ this.menuItem?.price | currency:'EUR' }}" subheader="{{ this.menuItem?.description }}" [style]="{width: '360px'}">
+  <p-header>
+    <a [routerLink]="[ '/' ]">
+      <i class="pi pi-chevron-left"></i>
+    </a>
+  </p-header>
 
-<h1>{{ this.menuItem?.name }}</h1>
-<p *ngIf="this.menuItem?.description">({{ this.menuItem?.description }})</p>
+  <p-menu [model]="textures"></p-menu>
 
-<h2>Texture</h2>
-<menu>
-  <li *ngFor="let texture of textures">{{ texture }}</li>
-</menu>
-
-<h2>Toppings</h2>
-<menu>
-  <li *ngFor="let topping of toppings">{{ topping }}</li>
-</menu>
-
+  <p-menu [model]="toppings"></p-menu>
+</p-card>

@@ -1,8 +1,8 @@
-import { MenuItem } from "./menu-item";
+import { Dish } from "./dish";
 
 export interface ICategory {
   name: string;
-  items: MenuItem[];
+  items: Dish[];
   textures: string[];
   toppings: string[];
 }
@@ -10,7 +10,7 @@ export interface ICategory {
 export class Category implements ICategory {
   constructor(
     public name: string,
-    public items: MenuItem[],
+    public items: Dish[],
     public textures: string[],
     public toppings: string[]
   ) {}

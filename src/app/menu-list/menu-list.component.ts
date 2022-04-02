@@ -40,8 +40,4 @@ export class MenuListComponent implements OnInit {
       };
     });
   }
-
-  navigateToDetails(itemId) {
-    this.router.navigate(['menu-item-details', itemId]);
-  }
 }
