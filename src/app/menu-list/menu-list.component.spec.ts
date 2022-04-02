@@ -29,7 +29,6 @@ describe('MenuListComponent', () => {
     const fixture = TestBed.createComponent(MenuListComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    console.log(compiled);
     expect(compiled.querySelector('div p').textContent).toContain('menu-list works!');
   });
 });
