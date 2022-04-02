@@ -31,18 +31,22 @@ export class MenuItemDetailsComponent implements OnInit {
     for (let category of menu) {
       this.menuItem = category.items.find(menuItem => menuItem.id === this.menuItemId);
       if (this.menuItem) {
-        this.textures = [{
-          label: 'Crust (required)',
-          items: category.textures.map(texture => {
-            return { label: texture };
-          })
-        }];
-        this.toppings = [{
-          label: 'Extra Toppings',
-          items: category.toppings.map(topping => {
-            return { label: topping };
-          })
-        }];
+        this.textures = [
+          {
+            label: 'Crust (required)',
+            items: category.textures.map(texture => {
+              return { label: texture };
+            })
+          }
+        ];
+        this.toppings = [
+          {
+            label: 'Extra Toppings',
+            items: category.toppings.map(topping => {
+              return { label: topping };
+            })
+          }
+        ];
         break;
       }
     }
