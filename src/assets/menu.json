@@ -1,6 +1,6 @@
 [
   {
-    "name": "Pizza",
+    "name": "Pizzas",
     "items": [
       {
         "id": 1,
@@ -32,7 +32,7 @@
     ]
   },
   {
-    "name": "Pasta",
+    "name": "Pastas",
     "items": [
       {
         "id": 4,
