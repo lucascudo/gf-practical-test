@@ -6,19 +6,22 @@
         "id": 1,
         "name": "Pizza Margherita",
         "description": "Tomato sauce, cheese",
-        "price": 7
+        "price": 7,
+        "currency": "USD"
       },
       {
         "id": 2,
         "name": "Pizza Prosciutto",
         "description": "Tomato sauce, cheese, ham",
-        "price": 10
+        "price": 10,
+        "currency": "USD"
       },
       {
         "id": 3,
         "name": "Pizza Frutti di Mare",
         "description": "Tomato sauce, cheese, tuna, shrimps",
-        "price": 12
+        "price": 12,
+        "currency": "USD"
       }
     ],
     "textures": [
@@ -37,18 +40,21 @@
       {
         "id": 4,
         "name": "Spaghetti Bolognese",
-        "price": 9
+        "price": 9,
+        "currency": "EUR"
       },
       {
         "id": 5,
         "name": "Lasagna Bolognese",
-        "price": 10
+        "price": 10,
+        "currency": "EUR"
       },
       {
         "id": 6,
         "name": "Spaghetti Frutti di Mare",
         "description": "with sea food",
-        "price": 12
+        "price": 12,
+        "currency": "EUR"
       }
     ],
     "textures": [

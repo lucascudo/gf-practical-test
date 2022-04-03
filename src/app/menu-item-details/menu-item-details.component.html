@@ -1,5 +1,5 @@
 <p-card
-  header="{{ this.menuItem?.name }} - {{ this.menuItem?.price | currency:'EUR' }}"
+  header="{{ this.menuItem?.name }} - {{ this.menuItem?.price | currency:this.menuItem?.currency }}"
   subheader="{{ (this.menuItem?.description) ? '(' + this.menuItem?.description + ')' : '' }}"
   [style]="{width: '360px'}">
     <p-header>

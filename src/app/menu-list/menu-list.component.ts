@@ -12,7 +12,6 @@ import { formatCurrency, getCurrencySymbol } from '@angular/common';
 })
 export class MenuListComponent implements OnInit {
 
-  currency: string = 'EUR';
   items: MenuItem[];
 
   constructor(
@@ -34,7 +33,7 @@ export class MenuListComponent implements OnInit {
           if (item.description) {
             label += ' (' + item.description + ')';
           }
-          label += ' - ' + formatCurrency(item.price, this.locale, getCurrencySymbol(this.currency, 'narrow'), this.currency);
+          label += ' - ' + formatCurrency(item.price, this.locale, getCurrencySymbol(item.currency, 'narrow'), item.currency);
           return {
             label: label,
             routerLink: ['/menu-item-details', item.id]
