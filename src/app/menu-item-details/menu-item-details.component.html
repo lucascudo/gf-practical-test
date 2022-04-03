@@ -1,6 +1,10 @@
+
+<p *ngIf="!this.menuItem">Whoops, something went wrong! <a [routerLink]="[ '/' ]">Visit our menu!</a></p>
+
 <p-card
-  header="{{ this.menuItem?.name }} - {{ this.menuItem?.price | currency:this.menuItem?.currency }}"
-  subheader="{{ (this.menuItem?.description) ? '(' + this.menuItem?.description + ')' : '' }}"
+  *ngIf="this.menuItem"
+  header="{{ this.menuItem.name }} - {{ this.menuItem.price | currency:this.menuItem.currency }}"
+  subheader="{{ (this.menuItem.description) ? '(' + this.menuItem.description + ')' : '' }}"
   [style]="{width: '360px'}">
     <p-header>
       <a [routerLink]="[ '/' ]">
