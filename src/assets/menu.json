@@ -5,7 +5,7 @@
   "categories": [
     {
       "name": "Pizzas",
-      "items": [
+      "dishes": [
         {
           "id": 1,
           "name": "Pizza Margherita",
@@ -55,7 +55,7 @@
     },
     {
       "name": "Pastas",
-      "items": [
+      "dishes": [
         {
           "id": 4,
           "name": "Spaghetti Bolognese",

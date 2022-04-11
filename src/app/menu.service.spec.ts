@@ -13,7 +13,7 @@ describe('MenuService', () => {
 
   it('should load menu data correctly', () => {
     const service: MenuService = TestBed.get(MenuService);
-    const singleItem: Dish = menuJson.categories[0].items[0];
+    const singleItem: Dish = menuJson.categories[0].dishes[0];
     expect(service.getGloriaMenu()).toEqual(menuJson);
     expect(service.getCurrency()).toEqual(menuJson.currency);
     expect(service.getItemById(singleItem.id)).toEqual(singleItem);

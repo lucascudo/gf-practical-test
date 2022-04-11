@@ -1,3 +1,17 @@
 <h1>Menu</h1>
 
-<p-menu [model]="items" [style]="{ width: '480px' }"></p-menu>
+<p-card
+*ngFor="let category of menu.categories"
+  header="{{ category.name }}"
+  [style]="{width: '520px'}">
+
+  <ul>
+    <li *ngFor="let dish of category.dishes">
+      <a [routerLink]="['/menu-item-details', dish.id]">
+        {{ dish.name }} <span *ngIf="dish.description">({{ dish.description }})</span> - {{ dish.price | currency:menu.currency }}
+      </a>
+    </li>
+  </ul>
+</p-card>
+
+

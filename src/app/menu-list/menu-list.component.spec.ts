@@ -1,7 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterTestingModule } from '@angular/router/testing';
-import { MenuModule } from 'primeng-lts/menu';
+import { CardModule } from 'primeng-lts/card';
 import { MenuService } from '../menu.service';
 
 import { MenuListComponent } from './menu-list.component';
@@ -14,9 +13,8 @@ describe('MenuListComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ MenuListComponent ],
       imports: [
-        RouterTestingModule,
         BrowserAnimationsModule,
-        MenuModule,
+        CardModule
       ],
       providers: [
         {

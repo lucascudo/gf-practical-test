@@ -25,7 +25,7 @@ export class MenuService {
   getItemById(id: number): Dish {
     let menuItem;
     for (let category of this.menu.categories) {
-      menuItem = category.items.find(item => item.id === id);
+      menuItem = category.dishes.find(item => item.id === id);
       if (menuItem) {
         return menuItem;
       }
@@ -34,8 +34,8 @@ export class MenuService {
 
   getExtrasByItemId(id: number) {
     for (let category of this.menu.categories) {
-      if (category.items.some(item => item.id === id)) {
-        const item = category.items.find(item => item.id === id)
+      if (category.dishes.some(item => item.id === id)) {
+        const item = category.dishes.find(item => item.id === id)
         return category.extras.concat((item && item.extras ) ? item.extras : []);
       }
     }

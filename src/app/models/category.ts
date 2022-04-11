@@ -3,6 +3,6 @@ import { Extra } from "./extra";
 
 export interface Category {
   name: string;
-  items: Dish[];
+  dishes: Dish[];
   extras?: Extra[];
 }
