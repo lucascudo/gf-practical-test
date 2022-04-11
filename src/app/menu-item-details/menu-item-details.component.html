@@ -12,7 +12,7 @@
       </a>
     </p-header>
 
-    <p-listbox *ngFor="let extra of extras; let i = index" [options]="extra.items" [(ngModel)]="selectedExtras[i]">
+    <p-listbox *ngFor="let extra of extras; let i = index" [options]="extra.pSelectItems" [(ngModel)]="selectedExtras[i]">
       <p-header>
         {{ extra.name + (extra.required ? ' (required)' : '') }}
       </p-header>

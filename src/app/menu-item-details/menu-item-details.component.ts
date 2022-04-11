@@ -15,7 +15,7 @@ export class MenuItemDetailsComponent implements OnInit {
   menuItem: Dish;
   currency: string;
   extras: Extra[];
-  selectedExtras: Extra[];
+  selectedExtras: string[] = [];
 
   constructor(
     private menuService: MenuService,
@@ -36,6 +36,5 @@ export class MenuItemDetailsComponent implements OnInit {
       });
       return e;
     });
-    this.selectedExtras = this.extras.map(e => null);
   }
 }
