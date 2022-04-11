@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
 import menuJson from '../assets/menu.json';
+import { Injectable } from '@angular/core';
 import { Dish } from './models/dish';
 import { GloriaMenu } from './models/gloria-menu';
 
@@ -35,7 +35,8 @@ export class MenuService {
   getExtrasByItemId(id: number) {
     for (let category of this.menu.categories) {
       if (category.items.some(item => item.id === id)) {
-        return category.extras;
+        const item = category.items.find(item => item.id === id)
+        return category.extras.concat((item && item.extras ) ? item.extras : []);
       }
     }
   }

@@ -70,7 +70,19 @@
           "id": 6,
           "name": "Spaghetti Frutti di Mare",
           "description": "with sea food",
-          "price": 12
+          "price": 12,
+          "extras": [
+            {
+              "name": "Extra Seafood",
+              "items": [
+                {
+                  "name": "shrimps",
+                  "price": 3
+                },
+                { "name": "tuna" }
+              ]
+            }
+          ]
         }
       ],
       "extras":
