@@ -1,15 +1,38 @@
 import { Injectable } from '@angular/core';
 import menuJson from '../assets/menu.json';
-import { Category } from './models/category';
+import { Dish } from './models/dish';
+import { GloriaMenu } from './models/gloria-menu';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MenuService {
 
-  constructor() { }
+  constructor() {
+    this.menu = menuJson;
+  }
 
-  get(): Category[] {
-    return menuJson;
+  private menu: GloriaMenu;
+
+  get(): GloriaMenu {
+    return this.menu;
+  }
+
+  getItemById(id: number): Dish {
+    let menuItem;
+    for (let category of this.menu.categories) {
+      menuItem = category.items.find(item => item.id === id);
+      if (menuItem) {
+        return menuItem;
+      }
+    }
+  }
+
+  getExtrasByItemId(id: number) {
+    for (let category of this.menu.categories) {
+      if (category.items.some(item => item.id === id)) {
+        return category.extras;
+      }
+    }
   }
 }

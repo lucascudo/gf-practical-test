@@ -1,69 +1,86 @@
-[
-  {
-    "name": "Pizzas",
-    "items": [
-      {
-        "id": 1,
-        "name": "Pizza Margherita",
-        "description": "Tomato sauce, cheese",
-        "price": 7,
-        "currency": "USD"
-      },
-      {
-        "id": 2,
-        "name": "Pizza Prosciutto",
-        "description": "Tomato sauce, cheese, ham",
-        "price": 10,
-        "currency": "USD"
-      },
-      {
-        "id": 3,
-        "name": "Pizza Frutti di Mare",
-        "description": "Tomato sauce, cheese, tuna, shrimps",
-        "price": 12,
-        "currency": "USD"
-      }
-    ],
-    "textures": [
-      "Crispy",
-      "Fluffy"
-    ],
-    "toppings": [
-      "Corn",
-      "Bacon",
-      "Extra mozzarella"
-    ]
-  },
-  {
-    "name": "Pastas",
-    "items": [
-      {
-        "id": 4,
-        "name": "Spaghetti Bolognese",
-        "price": 9,
-        "currency": "EUR"
-      },
-      {
-        "id": 5,
-        "name": "Lasagna Bolognese",
-        "price": 10,
-        "currency": "EUR"
-      },
-      {
-        "id": 6,
-        "name": "Spaghetti Frutti di Mare",
-        "description": "with sea food",
-        "price": 12,
-        "currency": "EUR"
-      }
-    ],
-    "textures": [
-      "Al dente",
-      "Soft"
-    ],
-    "toppings": [
-      "Grated cheese",
-      "Bacon"
-    ]
-  }
-]
+{
+  "id": 33,
+  "name": "Italian Menu",
+  "currency": "USD",
+  "categories": [
+    {
+      "name": "Pizzas",
+      "items": [
+        {
+          "id": 1,
+          "name": "Pizza Margherita",
+          "description": "Tomato sauce, cheese",
+          "price": 7
+        },
+        {
+          "id": 2,
+          "name": "Pizza Prosciutto",
+          "description": "Tomato sauce, cheese, ham",
+          "price": 10
+        },
+        {
+          "id": 3,
+          "name": "Pizza Frutti di Mare",
+          "description": "Tomato sauce, cheese, tuna, shrimps",
+          "price": 12
+        }
+      ],
+      "extras": [
+        {
+          "name": "Crust",
+          "required": true,
+          "items": [
+            "Crispy",
+            "Fluffy"
+          ]
+        },
+        {
+          "name": "Extra Toppings",
+          "items": [
+            "Corn",
+            "Bacon",
+            "Extra mozzarella"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pastas",
+      "items": [
+        {
+          "id": 4,
+          "name": "Spaghetti Bolognese",
+          "price": 9
+        },
+        {
+          "id": 5,
+          "name": "Lasagna Bolognese",
+          "price": 10
+        },
+        {
+          "id": 6,
+          "name": "Spaghetti Frutti di Mare",
+          "description": "with sea food",
+          "price": 12
+        }
+      ],
+      "extras":
+      [
+        {
+          "name": "Texture",
+          "items": [
+            "Al dente",
+            "Soft"
+          ]
+        },
+        {
+          "name": "Extra Ingredients",
+          "items": [
+            "Grated cheese",
+            "Bacon"
+          ]
+        }
+      ]
+    }
+  ]
+}

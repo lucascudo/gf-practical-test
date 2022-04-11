@@ -3,7 +3,7 @@
 
 <p-card
   *ngIf="this.menuItem"
-  header="{{ this.menuItem.name }} - {{ this.menuItem.price | currency:this.menuItem.currency }}"
+  header="{{ this.menuItem.name }} - {{ this.menuItem.price | currency:this.currency }}"
   subheader="{{ (this.menuItem.description) ? '(' + this.menuItem.description + ')' : '' }}"
   [style]="{width: '360px'}">
     <p-header>
@@ -12,7 +12,5 @@
       </a>
     </p-header>
 
-    <p-menu [model]="textures"></p-menu>
-
-    <p-menu [model]="toppings"></p-menu>
+    <p-menu [model]="extras"></p-menu>
 </p-card>

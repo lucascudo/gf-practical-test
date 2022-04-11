@@ -1,8 +1,8 @@
 import { Dish } from "./dish";
+import { Extra } from "./extra";
 
 export interface Category {
   name: string;
   items: Dish[];
-  textures: string[];
-  toppings: string[];
+  extras: Extra[];
 }

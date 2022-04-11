@@ -13,8 +13,8 @@ import { Dish } from '../models/dish';
 export class MenuItemDetailsComponent implements OnInit {
   menuItemId: number;
   menuItem: Dish;
-  textures: MenuItem[];
-  toppings: MenuItem[];
+  currency: string;
+  extras: MenuItem[];
 
   constructor(
     private menuService: MenuService,
@@ -27,28 +27,15 @@ export class MenuItemDetailsComponent implements OnInit {
   }
 
   getData(): void {
-    const menu: Category[] = this.menuService.get();
-    for (let category of menu) {
-      this.menuItem = category.items.find(menuItem => menuItem.id === this.menuItemId);
-      if (this.menuItem) {
-        this.textures = [
-          {
-            label: 'Crust (required)',
-            items: category.textures.map(texture => {
-              return { label: texture };
-            })
-          }
-        ];
-        this.toppings = [
-          {
-            label: 'Extra Toppings',
-            items: category.toppings.map(topping => {
-              return { label: topping };
-            })
-          }
-        ];
-        break;
+    this.currency = this.menuService.get().currency;
+    this.menuItem = this.menuService.getItemById(this.menuItemId);
+    this.extras = this.menuService.getExtrasByItemId(this.menuItemId).map(e => {
+      return {
+        label: e.name + (e.required ? ' (required)' : ''),
+        items: e.items.map(item => {
+          return { label: item };
+        })
       }
-    }
+    });
   }
 }
