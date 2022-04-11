@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuService } from '../menu.service';
 import { ActivatedRoute } from '@angular/router';
-import { MenuItem } from 'primeng-lts/api';
 import { Dish } from '../models/dish';
+import { Extra } from '../models/extra';
+
 
 @Component({
   selector: 'app-menu-item-details',
@@ -13,7 +14,8 @@ export class MenuItemDetailsComponent implements OnInit {
   menuItemId: number;
   menuItem: Dish;
   currency: string;
-  extras: MenuItem[];
+  extras: Extra[];
+  selectedExtras: Extra[];
 
   constructor(
     private menuService: MenuService,
@@ -26,15 +28,14 @@ export class MenuItemDetailsComponent implements OnInit {
   }
 
   getData(): void {
-    this.currency = this.menuService.get().currency;
+    this.currency = this.menuService.getCurrency();
     this.menuItem = this.menuService.getItemById(this.menuItemId);
-    this.extras = this.menuService.getExtrasByItemId(this.menuItemId).map(e => {
-      return {
-        label: e.name + (e.required ? ' (required)' : ''),
-        items: e.items.map(item => {
-          return { label: item };
-        })
-      }
+    this.extras = this.menuService.getExtrasByItemId(this.menuItemId).map((e) => {
+      e.pSelectItems = e.items.map(i => {
+        return { label: i, value: i };
+      });
+      return e;
     });
+    this.selectedExtras = this.extras.map(e => null);
   }
 }

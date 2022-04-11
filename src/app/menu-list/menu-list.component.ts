@@ -23,7 +23,7 @@ export class MenuListComponent implements OnInit {
   }
 
   getData(): void {
-    const menu: GloriaMenu = this.menuService.get();
+    const menu: GloriaMenu = this.menuService.getGloriaMenu();
     this.items = menu.categories.map(category => {
       return {
         label: category.name,

@@ -8,6 +8,9 @@ import { MenuListComponent } from './menu-list/menu-list.component';
 import { MenuItemDetailsComponent } from './menu-item-details/menu-item-details.component';
 import { MenuModule } from 'primeng/menu';
 import {CardModule} from 'primeng/card';
+import {ListboxModule} from 'primeng/listbox';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -21,6 +24,8 @@ import {CardModule} from 'primeng/card';
     AppRoutingModule,
     MenuModule,
     CardModule,
+    ListboxModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

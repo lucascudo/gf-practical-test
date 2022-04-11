@@ -14,8 +14,12 @@ export class MenuService {
 
   private menu: GloriaMenu;
 
-  get(): GloriaMenu {
+  getGloriaMenu(): GloriaMenu {
     return this.menu;
+  }
+
+  getCurrency(): string {
+    return this.menu.currency;
   }
 
   getItemById(id: number): Dish {
