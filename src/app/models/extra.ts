@@ -1,8 +1,9 @@
-import {SelectItem} from 'primeng/api';
+import { SelectItem } from 'primeng/api';
+import { ExtraItem } from './extra-item';
 
 export interface Extra {
   name: string;
-  items: string[];
+  items: ExtraItem[];
   pSelectItems?: SelectItem[];
   required?: boolean;
 }

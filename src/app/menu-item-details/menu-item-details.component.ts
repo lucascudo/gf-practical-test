@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, LOCALE_ID, OnInit } from '@angular/core';
 import { MenuService } from '../menu.service';
 import { ActivatedRoute } from '@angular/router';
 import { Dish } from '../models/dish';
 import { Extra } from '../models/extra';
+import { ExtraItem } from '../models/extra-item';
+import { formatCurrency, getCurrencySymbol } from '@angular/common';
 
 
 @Component({
@@ -15,9 +17,10 @@ export class MenuItemDetailsComponent implements OnInit {
   menuItem: Dish;
   currency: string;
   extras: Extra[];
-  selectedExtras: string[] = [];
+  selectedExtras: ExtraItem[] = [];
 
   constructor(
+    @Inject(LOCALE_ID) public locale: string,
     private menuService: MenuService,
     private route: ActivatedRoute,
   ) { }
@@ -30,9 +33,12 @@ export class MenuItemDetailsComponent implements OnInit {
   getData(): void {
     this.currency = this.menuService.getCurrency();
     this.menuItem = this.menuService.getItemById(this.menuItemId);
-    this.extras = this.menuService.getExtrasByItemId(this.menuItemId).map((e) => {
+    this.extras = this.menuService.getExtrasByItemId(this.menuItemId).map(e => {
       e.pSelectItems = e.items.map(i => {
-        return { label: i, value: i };
+        return {
+          label: i.name + (i.price ? ' (' + formatCurrency(i.price, this.locale, getCurrencySymbol(this.currency, 'narrow'), this.currency) + ')'  : ''),
+          value: i,
+        };
       });
       return e;
     });

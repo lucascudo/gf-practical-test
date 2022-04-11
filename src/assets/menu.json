@@ -30,16 +30,25 @@
           "name": "Crust",
           "required": true,
           "items": [
-            "Crispy",
-            "Fluffy"
+            { "name": "Crispy" },
+            { "name": "Fluffy" }
           ]
         },
         {
           "name": "Extra Toppings",
           "items": [
-            "Corn",
-            "Bacon",
-            "Extra mozzarella"
+            {
+              "name": "Corn",
+              "price": 0.5
+            },
+            {
+              "name": "Bacon",
+              "price": 1
+            },
+            {
+              "name": "Extra mozzarella",
+              "price": 1
+            }
           ]
         }
       ]
@@ -69,15 +78,21 @@
         {
           "name": "Texture",
           "items": [
-            "Al dente",
-            "Soft"
+            { "name": "Al dente" },
+            { "name": "Soft" }
           ]
         },
         {
           "name": "Extra Ingredients",
           "items": [
-            "Grated cheese",
-            "Bacon"
+            {
+              "name": "Grated cheese",
+              "price": 1.5
+            },
+            {
+              "name": "Bacon",
+              "price": 1
+            }
           ]
         }
       ]
