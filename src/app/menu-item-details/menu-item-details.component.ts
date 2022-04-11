@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuService } from '../menu.service';
 import { ActivatedRoute } from '@angular/router';
-import { Category } from '../models/category';
 import { MenuItem } from 'primeng-lts/api';
 import { Dish } from '../models/dish';
 
